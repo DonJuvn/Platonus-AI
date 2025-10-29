@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+body {
+   font-family: "Inter", sans-serif;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+   overflow-x: hidden;
+   /* background-color: red; */
+}
+html {
+   scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+   display: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+   margin: 0;
+   font-family: "Inter", sans-serif;
+   text-decoration: none;
+}
+button {
+   cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+   width: 90%;
+   max-width: 1536px;
+   margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+   width: 2px;
+   height: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+::-webkit-scrollbar-track {
+   background: #0a0a0a; /* dark track */
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: linear-gradient(
+      180deg,
+      #00aaff,
+      #0066ff
+   ); /* neon blue gradient */
+   border-radius: 10px;
+   box-shadow: 0 0 6px rgba(0, 150, 255, 0.6); /* subtle glow */
+   transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(
+      180deg,
+      #33ccff,
+      #0099ff
+   ); /* brighter on hover */
+   box-shadow: 0 0 10px rgba(0, 180, 255, 0.9);
+}
+
+/* Firefox */
+* {
+   scrollbar-width: thin;
+   scrollbar-color: #0099ff #0a0a0a; /* thumb, track */
+}
+
+
+/* header */
+#header{
+  padding: 15px 0;
+  width: 100vw;
+}
+.header{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.header .tabs{
+  gap: 10px;
+  display: flex;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header a{
+  font-weight: 600;
+  color: #535862;
+  font-size: 16px;
 }
