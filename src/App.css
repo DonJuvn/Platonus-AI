@@ -92,3 +92,149 @@ button {
   color: #535862;
   font-size: 16px;
 }
+
+#uploader {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+  color: #111827;
+}
+
+/* Upload box */
+.uploader {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.uploader h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.uploader p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.uploader input[type="file"] {
+  margin-bottom: 1rem;
+}
+
+.uploader button {
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.uploader button:hover {
+  background: #4338ca;
+}
+
+/* Section titles */
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+  color: #1f2937;
+}
+
+/* Grades Section */
+.grades-container {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.grade-item {
+  margin-bottom: 1rem;
+}
+
+.grade-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.grade-progress {
+  height: 12px;
+  border-radius: 6px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.grade-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+/* Dynamic bar color */
+.grade-fill[data-score] {
+  background: linear-gradient(
+    to right,
+    hsl(calc((var(--score) * 1.2)), 70%, 50%),
+    hsl(calc((var(--score) * 1.2)), 70%, 45%)
+  );
+  width: calc(var(--score) * 1%);
+}
+
+/* Advice Section Layout */
+.advice-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Card Style */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* UL + LI Styling */
+.card ul {
+  list-style: disc;
+  margin-left: 1.25rem;
+  color: #374151;
+  padding-left: 0.5rem;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Loading */
+p.loading {
+  text-align: center;
+  color: #4f46e5;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+

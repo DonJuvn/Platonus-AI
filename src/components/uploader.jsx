@@ -1,7 +1,10 @@
-import React, { useState } from "react";export default function Uploader() {
+import React, { useState } from "react";
+
+export default function Uploader() {
    const [file, setFile] = useState(null);
    const [response, setResponse] = useState(null);
    const [loading, setLoading] = useState(false);
+
    const handleFileChange = (e) => {
       setFile(e.target.files[0]);
    };
@@ -10,25 +13,19 @@ import React, { useState } from "react";export default function Uploader() {
       if (!file) return;
       setLoading(true);
 
-      // Simulate API delay
       setTimeout(() => {
          const fakeResponse = {
             grades: [
                { subject: "Математика", score: 85, credits: 3, gpaPoint: 3.33 },
                { subject: "Физика", score: 70, credits: 4, gpaPoint: 2.33 },
-               { subject: "Тарих", score: 55, credits: 2, gpaPoint: 1.33 },
+               { subject: "Тарих", score: 12, credits: 2, gpaPoint: 1.33 },
                { subject: "Ағылшын тілі", score: 95, credits: 2, gpaPoint: 4 },
                { subject: "Биология", score: 49, credits: 3, gpaPoint: 0 },
-               {
-                  subject: "Дене тәрбиесі",
-                  score: 100,
-                  credits: 1,
-                  gpaPoint: 4,
-               },
+               { subject: "Дене тәрбиесі", score: 100, credits: 1, gpaPoint: 4 },
             ],
             system_advices: {
-               average: 75.66666666666667,
-               weightedGPA: 2.2646666666666664,
+               average: 75.67,
+               weightedGPA: 2.26,
                lowest: { subject: "Биология", score: 49 },
                highest: { subject: "Дене тәрбиесі", score: 100 },
                belowThresholdSubjects: ["Биология (49)"],
@@ -71,46 +68,64 @@ import React, { useState } from "react";export default function Uploader() {
                <button onClick={handleUpload}>Файлды жүктеу</button>
             </div>
 
-            {loading && <p>Uploading and analyzing...</p>}
+            {loading && <p className="loading">Uploading and analyzing...</p>}
 
             {response && (
                <div>
-                  <h3>Grades</h3>
-                  <ul>
+                  {/* Grades Section */}
+                  <div className="grades-container">
+                     <h3>Бағалар</h3>
                      {response.grades.map((g, i) => (
-                        <li key={i}>
-                           {g.subject}: {g.score} ({g.gpaPoint} GPA)
-                        </li>
+                        <div className="grade-item" key={i}>
+                           <div className="grade-header">
+                              <span>{g.subject}</span>
+                              <span>{g.score}%</span>
+                           </div>
+                           <div className="grade-progress">
+                              <div
+                                 className="grade-fill"
+                                 style={{ "--score": g.score }}
+                                 data-score={g.score}
+                              ></div>
+                           </div>
+                        </div>
                      ))}
-                  </ul>
+                     <ul>
+  {Object.entries(response.system_advices)
+    .filter(([key]) => key !== "suggestions") // exclude suggestions
+    .map(([key, value], i) => (
+      <li key={i}>
+        <strong>{key}:</strong>{" "}
+        {typeof value === "object" ? JSON.stringify(value) : value}
+      </li>
+    ))}
+</ul>
 
-                  <h3>System Advices</h3>
-                  <p>Орта: {response.system_advices.average}</p>
-                  <p>GPA: {response.system_advices.weightedGPA}</p>
-                  <p>
-                     Ең төменгі: {response.system_advices.lowest.subject} (
-                     {response.system_advices.lowest.score})
-                  </p>
-                  <p>
-                     Ең жоғары: {response.system_advices.highest.subject} (
-                     {response.system_advices.highest.score})
-                  </p>
-                  <p>
-                     50-ден төмен:{" "}
-                     {response.system_advices.belowThresholdSubjects.join(", ")}
-                  </p>
-                  <ul>
-                     {response.system_advices.suggestions.map((s, i) => (
-                        <li key={i}>{s}</li>
-                     ))}
-                  </ul>
+                  </div>
 
-                  <h3>AI Advices</h3>
-                  <ul>
+                  {/* System Advices */}
+                  <h3>Жүйе кеңестері</h3>
+                  <div className="advice-list">
+                     <div className="card">
+                        <ul>
+                           {response.system_advices.suggestions.map((s, i) => (
+                              <li key={i}>{s}</li>
+                           ))}
+                        </ul>
+                     </div>
+                  </div>
+
+                  {/* AI Advices */}
+                  <h3>AI Кеңестері</h3>
+                  <div className="advice-list">
                      {response.ai_advices.map((a, i) => (
-                        <li key={i}>{a}</li>
+                        <div className="card" key={i}>
+                           <ul>
+                              <li>{a}</li>
+                           </ul>
+                        </div>
                      ))}
-                  </ul>
+                  </div>
                </div>
             )}
          </div>
