@@ -1,0 +1,248 @@
+{
+  "students": [
+    {
+      "name": "Айгерим",
+      "gpa": 3.06,
+      "system_summary": {
+        "average_score": 76.55892856999999,
+        "total_credits": 18,
+        "top_subjects": [
+          {
+            "subject": "Биология",
+            "average": 77.33035714
+          },
+          {
+            "subject": "История",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Физра",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Химия",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Рус яз",
+            "average": 77.24464286
+          }
+        ],
+        "low_subjects": [
+          {
+            "subject": "История",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Физра",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Химия",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Рус яз",
+            "average": 77.24464286
+          },
+          {
+            "subject": "Математика",
+            "average": 72.7875
+          }
+        ]
+      },
+      "AIStatisticsWithNumbers": [
+        {
+          "subject": "Биология",
+          "score": 15.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "История",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "Математика",
+          "score": 72.7875,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 61.3125,
+          "credits": 1,
+          "Average": 72.7875
+        },
+        {
+          "subject": "Рус яз",
+          "score": 77.24464286,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.74107143,
+          "credits": 1,
+          "Average": 77.24464286
+        },
+        {
+          "subject": "Физра",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "Химия",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        }
+      ],
+      "ai_advices": [
+        "Based on the provided information, here are three short bullet advices for Айгерим:",
+        "Summary: Ай"
+      ],
+      "ai_raw": "Based on the provided information, here are three short bullet advices for Айгерим:\n\n* Immediately prioritize focused effort in Математика, which has the lowest average score among her subjects.\n* Analyze the distribution of scores in her top subjects (Биология, История, Физра, Химия, Рус яз) to ensure consistent performance across all exams and quizzes.\n* Identify and study for any potential weak points in mid-terms (mid1, mid2), as these have contributed to the average score, but specific scores are not given.\n\nSummary: Ай"
+    },
+    {
+      "name": "Данияр",
+      "gpa": 3.09,
+      "system_summary": {
+        "average_score": 77.33035714,
+        "total_credits": 18,
+        "top_subjects": [
+          {
+            "subject": "Биология",
+            "average": 77.33035714
+          },
+          {
+            "subject": "История",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Математика",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Рус яз",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Физра",
+            "average": 77.33035714
+          }
+        ],
+        "low_subjects": [
+          {
+            "subject": "История",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Математика",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Рус яз",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Физра",
+            "average": 77.33035714
+          },
+          {
+            "subject": "Химия",
+            "average": 77.33035714
+          }
+        ]
+      },
+      "AIStatisticsWithNumbers": [
+        {
+          "subject": "Биология",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "История",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "Математика",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "Рус яз",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "Физра",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        },
+        {
+          "subject": "Химия",
+          "score": 77.33035714,
+          "midterm_1": 50,
+          "midterm_2": 70,
+          "final_exam": 90,
+          "avg_rating": 68.88392857,
+          "credits": 1,
+          "Average": 77.33035714
+        }
+      ],
+      "ai_advices": [
+        "Based on the given data, here are some recommendations for Danilar:",
+        "• Danilar should calculate the average score for each subject to identify the exact middle points (mid1 and mid2) and final scores required for his current average score of 77.33.",
+        "• Danilar should focus on improving his performance in chemistry, as it has the lowest average score among all the subjects listed."
+      ],
+      "ai_raw": "Based on the given data, here are some recommendations for Danilar:\n\n• Danilar should calculate the average score for each subject to identify the exact middle points (mid1 and mid2) and final scores required for his current average score of 77.33.\n• Danilar should focus on improving his performance in chemistry, as it has the lowest average score among all the subjects listed.\n• Danilar needs to balance his efforts in other subjects with chemistry, considering that some subject's 'weak' score is actually equal to 'strong' across other subjects.\n\nSummary: Danilar excels in a"
+    }
+  ],
+  "students_below_threshold": [],
+  "summary": {
+    "total_students": 2,
+    "threshold": 60
+  }
+}
