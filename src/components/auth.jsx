@@ -6,26 +6,27 @@ export default function Login({ onLogin }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  // 🔹 Статичные пользователи
+  const users = [
+    { email: "student@test.com", password: "123456", role: "student" },
+    { email: "curator@test.com", password: "123456", role: "curator" },
+  ];
+
   const handleLogin = (e) => {
     e.preventDefault();
-    if (!email || !password) {
-      setError("Введите email и пароль");
-      return;
+
+    const user = users.find(
+      (u) => u.email === email && u.password === password && u.role === role
+    );
+
+    if (user) {
+      sessionStorage.setItem("userRole", user.role);
+      sessionStorage.setItem("userEmail", user.email);
+      setError("");
+      onLogin(); // уведомляем App, что пользователь вошёл
+    } else {
+      setError("Неверный email, пароль или роль");
     }
-
-    // сохраняем данные в sessionStorage
-    sessionStorage.setItem("userRole", role);
-    sessionStorage.setItem("userEmail", email);
-    
-    setError("");
-    onLogin(); // уведомляем App, что пользователь вошёл
-  };
-
-  const handleLogout = () => {
-    // очищаем sessionStorage
-    sessionStorage.removeItem("userRole");
-    sessionStorage.removeItem("userEmail");
-    window.location.reload(); // перезагрузка для возврата на форму входа
   };
 
   return (
@@ -82,17 +83,6 @@ export default function Login({ onLogin }) {
         >
           Войти
         </button>
-
-        {/* Кнопка выхода (можно показывать после входа, если нужно) */}
-        {sessionStorage.getItem("userRole") && (
-          <button
-            type="button"
-            onClick={handleLogout}
-            className="bg-red-500 text-white rounded-lg py-2 hover:bg-red-600 transition mt-2"
-          >
-            Выйти
-          </button>
-        )}
       </form>
     </div>
   );
